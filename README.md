@@ -1,6 +1,6 @@
 # Design-Patterns-Training
 
-<h2>This repository will be used to make a RPG app, or any tabletop games. So I'm trying to use everything that I can use here like:</h2>
+<h3>This repository will be used to make a RPG app, or any tabletop games. So I'm trying to use everything that I can use here like:</h3>
 <br>
 <ul>
   <li>Design Patterns</li>
