@@ -8,4 +8,5 @@
   <li>Clean Code</li>
   <li>Kotlin (if possible)</li>
   <li>some NF to Databases</li>
+  <li>SQLite</li>
 <ul>
