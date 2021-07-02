@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 public class MainActivity extends AppCompatActivity {
-    int tempoSplash = 5 * 1000; //Tempo em ms
+    int tempoSplash = 3 * 1000; //Tempo em ms
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

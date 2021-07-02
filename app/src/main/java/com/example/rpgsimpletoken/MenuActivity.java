@@ -22,31 +22,31 @@ public class MenuActivity extends AppCompatActivity {
         addSheet = findViewById(R.id.addSheet); //FloatingActionButton
 
     }
-    public void chooseSheet(){
-        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(getApplicationContext(), R.style.Widget_AppCompat_ActionBar);
-        alertDialog.setTitle("Escolha o modelo de ficha que deseja criar");
-        alertDialog.setIcon(R.drawable.dice_logo);
+    public void addSheet(View view){
         final RadioButton radioButton = new RadioButton(getApplicationContext());
         radioButton.setText("D&D");
         radioButton.setText("Cyberpunk");
-        alertDialog.setView(radioButton);
 
-        //Sim ou não
-        alertDialog.setPositiveButton("Criar", (dialog, which) -> {
+        AlertDialog.Builder builder = new AlertDialog.Builder(
+                MenuActivity.this)
+                .setTitle("Escolha o modelo de ficha que deseja criar")
+                .setView(radioButton)
+                .setIcon(R.drawable.dice_logo)
+                .setPositiveButton("Criar", (dialog, which) -> {
+                    Intent sheetScreen = new Intent(MenuActivity.this, SheetActivity.class);
+                    startActivity(sheetScreen);
+                })
+                .setNegativeButton("cancelar", (dialog, which) -> {
 
-        });
+                });
+
+        //Creating the dialog message at the screen
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+
     }
 
-    public void addSheet(View view) {
-        /*if(){
-
-        } else {
-
-        }*/
-        chooseSheet();
-        Intent sheetScreen = new Intent(MenuActivity.this, SheetActivity.class);
-        startActivity(sheetScreen);
-    }
 
 
 

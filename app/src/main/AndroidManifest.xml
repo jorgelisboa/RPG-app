@@ -10,8 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RPGSimpleToken">
         <activity android:name=".SheetActivity"></activity>
-        <activity android:name=".MenuActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MenuActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

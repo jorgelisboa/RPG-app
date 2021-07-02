@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C6452B83"
+    android:background="#C6180D33"
     tools:context=".SheetActivity">
 
     <EditText
