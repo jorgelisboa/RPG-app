@@ -23,7 +23,6 @@ public class SplashActivity extends AppCompatActivity {
             startActivity(trocarDeTela);
             finish(); //Fecha a activity
         }, tempoSplash);
-
     }
 
 }

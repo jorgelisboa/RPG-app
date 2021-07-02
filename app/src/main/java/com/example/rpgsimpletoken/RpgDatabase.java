@@ -7,8 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class RpgDatabase extends SQLiteOpenHelper {
-    SheetFactory sheetFactory = new SheetFactory();
-    private final String dndSheet = sheetFactory.makeSheet();
+    MainActivity mainActivity = new MainActivity();
 
     public RpgDatabase(@Nullable Context context, int version) {
         super(context, "DB", null, 1);
@@ -16,7 +15,7 @@ public class RpgDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        //db.execSQL(mainActivity.createSheet());
     }
 
     @Override
@@ -27,6 +26,6 @@ public class RpgDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL();
+
     }
 }
