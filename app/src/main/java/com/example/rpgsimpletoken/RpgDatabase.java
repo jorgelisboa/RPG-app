@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class RpgDatabase extends SQLiteOpenHelper {
-    MainActivity mainActivity = new MainActivity();
+    MenuActivity menuActivity = new MenuActivity();
 
     public RpgDatabase(@Nullable Context context, int version) {
         super(context, "DB", null, 1);
