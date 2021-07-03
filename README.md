@@ -10,7 +10,7 @@
   <li>Kotlin (if possible)</li>
   <li>some NF to Databases</li>
   <li>SQLite</li>
-<ul>
+</ul>
 <h4>What the app will do:</h4>
 <ul>
   <li>Crate character sheets</li>
@@ -19,4 +19,4 @@
   <li>Connection with your friends</li>
   <li>Dices (3d if we can)</li>
   <li>Some grid for the campaings</li>
-<ul>
+</ul>
