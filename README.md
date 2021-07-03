@@ -11,6 +11,7 @@
   <li>some NF to Databases</li>
   <li>SQLite</li>
 </ul>
+<hr>
 <h4>What the app will do:</h4>
 <ul>
   <li>Crate character sheets</li>
