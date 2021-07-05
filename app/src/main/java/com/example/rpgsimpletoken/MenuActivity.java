@@ -3,6 +3,7 @@ package com.example.rpgsimpletoken;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class MenuActivity extends AppCompatActivity {
     //Itens at screen
     FloatingActionButton addSheet;
+    RpgDatabase rpgDatabase = new RpgDatabase(MenuActivity.this, 1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,19 +32,21 @@ public class MenuActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(
                 MenuActivity.this)
                 .setTitle("Escolha o modelo de ficha que deseja criar")
-                .setView(radioButton)
                 .setIcon(R.drawable.dice_logo)
-                .setPositiveButton("Criar", (dialog, which) -> {
+                .setCancelable(false)
+                .setPositiveButton("D&D", (dialog, which) -> {
                     Intent sheetScreen = new Intent(MenuActivity.this, SheetActivity.class);
                     startActivity(sheetScreen);
                 })
-                .setNegativeButton("cancelar", (dialog, which) -> {
-
+                .setNegativeButton("Fate", (dialog, which) -> {
+                    Intent sheetScreen = new Intent(MenuActivity.this, SheetActivity.class);
+                    startActivity(sheetScreen);
+                }).setNeutralButton("Cancelar", (dialog, which) -> {
+                    dialog.dismiss();
                 });
 
         //Creating the dialog message at the screen
-        AlertDialog dialog = builder.create();
-        dialog.show();
+        builder.create().show();
 
 
     }
